@@ -27,6 +27,8 @@ export default function Upload() {
         setIsPopupVisible(false);
     };
 
+    
+
     return (
         <div id="demo" className="demo-container">
             <div className="demo-inner">
@@ -79,36 +81,34 @@ export default function Upload() {
             {/* Conditionally render the Popup based on state */}
             {isPopupVisible && (
                 <div>
-                    <div 
-                        style={{
-                            padding: '20px',
-                            border: '1px solid black',
-                            backgroundColor: 'lightgray',
-                            position: 'fixed',
-                            top: '500px',
-                            left: '800px',
-                            //transform: 'translate(-50%, -50%)',
-                            zIndex: 1000,
-                            alignContent: 'center'
-                        }}
-                    >
-                        <p>This is a pop-up window!</p>
-                        <button className='upload-button' onClick={closePopup}>Close</button>
+                    <div className='pop-up-box'>
+                        <button className='close-button' onClick={closePopup}>X</button>
+
+                        <div className='flex-container'>
+                            <div>
+                                <img
+                                    src={fileURL}
+                                    alt="Uploaded File"
+                                    style={{ width: '350px' }}
+                                />
+                            </div>
+
+                            <div >
+                                <p className='pop-up-text'>Result: </p>
+                                <p className='pop-up-text'>Enter location of pothole</p>
+                                <input className='pop-up-text input-loc' type="text" />
+                                <br />
+                                <br />
+                                <p className='pop-up-text'>Describe the pothole</p>
+                                <textarea className='pop-up-text input-desc'></textarea>
+                            </div>
+                        </div>
+
+                        <button className='upload-button' onClick={()=>{alert("Report has been sent!\nView it in history"); closePopup();}}>Report</button>
+                        
                     </div>
 
-                    <div 
-                        style={{
-                            position: 'fixed',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '100%',
-                            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                            zIndex: 999,
-                            alignContent: 'center'
-                        }}
-                        onClick={closePopup}
-                    />
+                    <div className='pop-up-bg'/>
                 </div>
             )}
         </div>
