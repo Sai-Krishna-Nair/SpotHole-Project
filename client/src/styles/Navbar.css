@@ -1,0 +1,255 @@
+.header {
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    margin-bottom: 70px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.logo-text {
+    font-family: 'Boring Sans B Trial';
+    font-size: 330px; 
+    letter-spacing: 0.5vw;
+    font-weight: 700;
+    color: rgb(36, 34, 34);
+    text-decoration: none;
+    animation: fadeIn 1s ease forwards;
+    height: 316px;
+    margin: 0;
+    padding: 0;
+    line-height:0.85;
+}
+
+.sticky-image {
+    position: fixed;
+    top: 0;
+    opacity: 0;
+}
+
+.sticky-image.visible {
+    opacity: 1;
+    top: 3%;
+    left: 2%;
+    animation: fadeIn .3s ease-in-out;
+    z-index: 100;
+}
+
+.sticky-image.visible.fixed {
+    position: fixed;
+    animation: none;
+}
+
+.logo {
+    position: sticky;
+    top: 0;
+    width: 55px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    background: rgba(95, 94, 93, 0.537);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    backdrop-filter: blur(3px);
+}
+
+.navbar a {
+    background: none;
+    border: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: rgb(235, 228, 228);
+    transition: all 0.3s ease;
+    height: 100%;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #b4e363;
+    background-color: #000;
+}
+
+.icon-container {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    z-index: 10;
+}
+
+.icon-container a {
+    color: #000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px;
+    margin: 0 0 0 5px;
+    border: 1px solid black;
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+    text-decoration: none;
+}
+
+.icon-container a:hover {
+    background-color: black;
+    color: #a1c95d;
+}
+
+.icon-container .fa {
+    font-size: 20px;
+}
+
+.icon-container .contact {
+    font-size: 18px;
+    padding: 7px 18px;
+    position: relative;
+}
+
+.icon-container .contact::before {
+    content: " Visit Us →";
+    transition: .2s ease;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+.navbar .active {
+    color: white;
+    position: relative;
+}
+
+.navbar .active::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.navbar .active:hover::after {
+    background-color: #a1c95d;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .logo-text {
+        font-size: 250px;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .logo-text {
+        font-size: 200px;
+    }
+
+    .navbar {
+        padding: 8px 16px;
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .icon-container a {
+        font-size: 14px;
+        padding: 7px 8px;
+    }
+
+    .icon-container .contact {
+        font-size: 16px;
+        padding: 5px 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 150px;
+    }
+
+    .navbar {
+        padding: 6px 12px;
+        gap: 8px;
+    }
+
+    .navbar a {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .icon-container a {
+        font-size: 12px;
+        padding: 5px 6px;
+    }
+
+    .icon-container .contact {
+        font-size: 14px;
+        padding: 3px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-text {
+        font-size: 100px;
+    }
+
+    .navbar {
+        padding: 4px 8px;
+        gap: 5px;
+    }
+
+    .navbar a {
+        font-size: 8px;
+        padding: 4px 8px;
+    }
+
+    .icon-container a {
+        font-size: 10px;
+        padding: 3px 4px;
+    }
+
+    .icon-container .contact {
+        font-size: 12px;
+        padding: 2px 8px;
+    }
+}

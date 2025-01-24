@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../assets/fonts/Boring-Sans-B-Regular-trial.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --background-color: rgb(249, 247, 245);
+    --accent-color: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-width: 100vw;
+    font-family: Poppins;
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}

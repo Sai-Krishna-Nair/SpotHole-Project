@@ -1,0 +1,27 @@
+.footer-container {
+    background-color: #3d4f1e;
+    height: 10vh;
+    bottom: 0;
+}
+
+.footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-title{
+    color: #fefefe;
+    font-size: 45px;
+    font-family: 'Boring Sans B Trial';
+    letter-spacing: 3px;
+}
+
+.footer-text {
+    color: #b9c2d3;
+    font-size: 1rem;
+}

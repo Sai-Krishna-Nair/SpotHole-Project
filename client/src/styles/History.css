@@ -1,0 +1,78 @@
+.uploads-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.upload-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.upload-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 6px rgb(85, 107, 47);
+}
+
+.upload-image img {
+    min-height: 180px;
+    max-height: 200px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.upload-image:hover {
+    cursor: pointer;
+}
+
+.upload-details {
+    margin-left: 100px;
+    text-align: left;
+}
+
+.upload-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: Poppins;
+    color: #333;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .uploads-container {
+        flex-direction: column;
+    }
+
+    .upload-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .upload-details {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .upload-details p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .upload-card {
+        padding: 10px;
+    }
+
+    .upload-details p {
+        font-size: 14px;
+    }
+}
