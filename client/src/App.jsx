@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import Home from './Pages/Home';
@@ -12,8 +12,17 @@ import Signup from './Pages/Signup';
 function App() {
     const [user, setUser] = useState(null); // State to store logged-in user details
 
+    // Check sessionStorage for an existing token on app initialization
+    useEffect(() => {
+        const token = sessionStorage.getItem('token');
+        if (token) {
+            setUser(token); // Restore the user session
+        }
+    }, []);
+
     // Simulate login/signup success
     const handleAuthSuccess = (userData) => {
+        sessionStorage.setItem('token', userData); // Store the token in sessionStorage
         setUser(userData); // Store the user's details
     };
 

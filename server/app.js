@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const cors = require('cors'); // Import the CORS middleware
 const auth = require('./routes/auth');
+const profile = require('./routes/profile');
 const app = express();
 const PORT = 3000;
 
@@ -13,6 +14,7 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/api/v1/auth',auth);
+app.use('/api/v1/profile',profile);
 
 
 

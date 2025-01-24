@@ -11,7 +11,7 @@ function Login({ onAuthSuccess }) {
 
     // Check for token on component mount and restore authentication state
     useEffect(() => {
-        const token = localStorage.getItem('token');
+        const token = sessionStorage.getItem('token');
         if (token) {
             onAuthSuccess(token); // Update the parent with the stored token
         }
@@ -34,7 +34,7 @@ function Login({ onAuthSuccess }) {
 
             if (response.ok) {
                 // Store the token in localStorage
-                localStorage.setItem('token', data.token);
+                sessionStorage.setItem('token', data.token);
 
                 // Handle successful login
                 onAuthSuccess(data.token);
