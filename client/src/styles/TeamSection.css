@@ -113,11 +113,11 @@
 } */
 
 
-section{
-    margin: 0;padding: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-}
+/*section{*/
+/*    margin: 0;padding: 0;*/
+/*    min-width: 100vw;*/
+/*    min-height: 100vh;*/
+/*}*/
 
 .team-title{
     font-size: 150px;
