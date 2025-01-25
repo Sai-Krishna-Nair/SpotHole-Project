@@ -44,7 +44,7 @@ export default function Navbar() {
                 <NavLink className={(e) => e.isActive ? "active" : ""} to='/profile'>PROFILE</NavLink>
             </nav>
             <div className="icon-container">
-                <a href="" className="contact"></a>
+                <div className="contact"></div>
                 <a aria-label="Lightmode">
                     <i className="fa-brands fa-github icon"></i>
                 </a>

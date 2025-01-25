@@ -2,8 +2,8 @@ a{
     color: black;
 }
 .members h2{
-    font-size: 100px;
-    margin-top: -120px;
+    font-size: 150px;
+    margin-top: -180px;
     margin-bottom: 120px;
     font-family: Boring Sans B Trial;
 }
@@ -18,7 +18,7 @@ a{
     background: rgb(209, 205, 205);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.468);
     text-align: center;
     transition: transform 0.3s ease;
     z-index: 1;
@@ -32,15 +32,15 @@ a{
 .member-image img{
     font-size: 2.5rem;
     color: #333;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4/4;
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 6/4;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
 .member-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.89rem;
     margin-top: 5px;
     /* margin-bottom: 15px; */
     color: #333;
@@ -48,7 +48,7 @@ a{
 
 .member-card p {
     margin-bottom: 15px;
-    color: #666;
+    color: #2c2b2b;
     line-height: 1.6;
 }
 .member-icon{
@@ -56,6 +56,10 @@ a{
     justify-content: center;
     gap: 20px;
     font-size: 24px;
+    /* flex-direction: column; */
+}
+.member-card p{
+    font-size: 1rem;
 }
 .member-icon .icon{
     padding: 7px;
@@ -63,6 +67,5 @@ a{
 }
 
 .member-icon .icon:hover{
-    color: #92bd48;
-    border: 2px solid #556b2f ;
+    color: #719239;
 }

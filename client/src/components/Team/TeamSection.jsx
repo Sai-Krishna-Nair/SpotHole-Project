@@ -1,10 +1,11 @@
 import React from "react";
 // import TeamCard from "../Team/TeamCard";
 import "../../styles/TeamSection.css";
-import img from "../../assets/pothole.jpg";
+import boi from "../../assets/boypic.jpg";
+import girl from "../../assets/girlpic.jpg";
 
 function TeamSection() {
-    const Member = ({ image, name, description, iconClass1, iconClass2, iconClass3 }) => (
+    const Member = ({image,name, description, iconClass1, iconClass2, iconClass3 }) => (
         <div className="member-card">
             <div className="member-image">
                 <img src={image} alt="image" />
@@ -25,50 +26,50 @@ function TeamSection() {
                     <h2>Our Team</h2>
                     <div className="members-grid">
                         <Member
-                            image={img}
-                            name="18"
+                            image={boi}
+                            name="Ehsaas Nahata"
                             description="Advanced AI algorithms for instant pothole detection"
-                            iconClass1="fa-brands fa-instagram icon"
+                            iconClass1="fa-brands fa-twitter icon"
                             iconClass2="fa-brands fa-github icon"
                             iconClass3="fa-brands fa-linkedin icon"
                         />
                         <Member
-                            image={img}
-                            name="65"
+                            image={boi}
+                            name="Aditya Vidiyala"
                             description="Precise location tracking and mapping of road conditions"
-                            iconClass1="fa-brands fa-instagram icon"
+                            iconClass1="fa-brands fa-twitter icon"
                             iconClass2="fa-brands fa-github icon"
                             iconClass3="fa-brands fa-linkedin icon"
                         />
                         <Member
-                            image={img}
-                            name="91"
+                            image={boi}
+                            name="Kanduri Adithya"
                             description="Comprehensive data analysis and reporting"
-                            iconClass1="fa-brands fa-instagram icon"
+                            iconClass1="fa-brands fa-twitter icon"
                             iconClass2="fa-brands fa-github icon"
                             iconClass3="fa-brands fa-linkedin icon"
                         />
                         <Member
-                            image={img}
-                            name="121"
+                            image={boi}
+                            name="Udit Kandi"
                             description="Advanced AI algorithms for instant pothole detection"
-                            iconClass1="fa-brands fa-instagram icon"
+                            iconClass1="fa-brands fa-twitter icon"
                             iconClass2="fa-brands fa-github icon"
                             iconClass3="fa-brands fa-linkedin icon"
                         />
                         <Member
-                            image={img}
-                            name="122"
+                            image={boi}
+                            name="T Sai Krishna"
                             description="Precise location tracking and mapping of road conditions"
-                            iconClass1="fa-brands fa-instagram icon"
+                            iconClass1="fa-brands fa-twitter icon"
                             iconClass2="fa-brands fa-github icon"
                             iconClass3="fa-brands fa-linkedin icon"
                         />
                         <Member
-                            image={img}
-                            name="124"
+                            image={girl}
+                            name="Nigama Reddy V"
                             description="Comprehensive data analysis and reporting"
-                            iconClass1="fa-brands fa-instagram icon"
+                            iconClass1="fa-brands fa-twitter icon"
                             iconClass2="fa-brands fa-github icon"
                             iconClass3="fa-brands fa-linkedin icon"
                         />
