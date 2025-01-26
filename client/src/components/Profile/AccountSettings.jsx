@@ -1,17 +1,84 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import '../../styles/AccountSettings.css';
 
 function AccountSettings() {
     const [selectedOption, setSelectedOption] = useState('changePassword');
-
     const [currentPassword, setCurrentPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [confirmNewPassword, setConfirmNewPassword] = useState('');
+    const [newEmail, setNewEmail] = useState('');
+    const [error, setError] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
 
-    const handleChangePassword = (e) => {
+    // Extract token from localStorage
+    const token = sessionStorage.getItem('token');
+
+
+    useEffect(() => {
+        setSuccessMessage('');
+    }, [selectedOption]);
+
+    const handleChangePassword = async (e) => {
         e.preventDefault();
-        // Add your password change logic here
-        console.log('Password changed:', { currentPassword, newPassword, confirmNewPassword });
+
+        // Clear previous messages
+        setError('');
+        setSuccessMessage('');
+
+        if (newPassword !== confirmNewPassword) {
+            setError('Passwords do not match');
+            return;
+        }
+
+        try {
+            const response = await fetch('http://localhost:3000/api/v1/profile/changePassword', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({ currentPassword, newPassword, confirmNewPassword })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setSuccessMessage(data.message);
+            } else {
+                setError(data.message || 'Error updating password');
+            }
+        } catch (error) {
+            setError(error.message || 'Error updating password');
+        }
+    };
+
+    const handleChangeEmail = async (e) => {
+        e.preventDefault();
+
+        // Clear previous messages
+        setError('');
+        setSuccessMessage('');
+
+        try {
+            const response = await fetch('http://localhost:3000/api/v1/profile/changeEmail', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({ newEmail })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setSuccessMessage(data.message);
+            } else {
+                setError(data.message || 'Error updating email');
+            }
+        } catch (error) {
+            setError(error.message || 'Error updating email');
+        }
     };
 
     const renderForm = () => {
@@ -20,10 +87,18 @@ function AccountSettings() {
                 return (
                     <div className="form-section">
                         <h2>Change Email</h2>
-                        <form>
+                        {error && <p className="error-message">{error}</p>}
+                        {successMessage && <p className="success-message">{successMessage}</p>}
+                        <form onSubmit={handleChangeEmail}>
                             <div className="form-group">
                                 <label>New Email</label>
-                                <input type="email" placeholder="Enter new email" />
+                                <input
+                                    type="email"
+                                    placeholder="Enter new email"
+                                    value={newEmail}
+                                    onChange={(e) => setNewEmail(e.target.value)}
+                                    required
+                                />
                             </div>
                             <button type="submit">Submit</button>
                         </form>
@@ -33,17 +108,16 @@ function AccountSettings() {
                 return (
                     <div className="form-section">
                         <h2>Change Password</h2>
-                        {newPassword !== confirmNewPassword && (
-                            <p className="error-message">Passwords do not match</p>
-                        )}
+                        {error && <p className="error-message">{error}</p>}
+                        {successMessage && <p className="success-message">{successMessage}</p>}
                         <form onSubmit={handleChangePassword}>
                             <div className="form-group">
                                 <label>
                                     Current Password <span style={{ color: 'red' }}>*</span>
                                 </label>
-                                <input 
-                                    type="password" 
-                                    placeholder="Enter current password" 
+                                <input
+                                    type="password"
+                                    placeholder="Enter current password"
                                     value={currentPassword}
                                     onChange={(e) => setCurrentPassword(e.target.value)}
                                     required
@@ -53,9 +127,9 @@ function AccountSettings() {
                                 <label>
                                     New Password <span style={{ color: 'red' }}>*</span>
                                 </label>
-                                <input 
-                                    type="password" 
-                                    placeholder="Enter new password" 
+                                <input
+                                    type="password"
+                                    placeholder="Enter new password"
                                     value={newPassword}
                                     onChange={(e) => setNewPassword(e.target.value)}
                                     required
@@ -65,9 +139,9 @@ function AccountSettings() {
                                 <label>
                                     Confirm New Password <span style={{ color: 'red' }}>*</span>
                                 </label>
-                                <input 
-                                    type="password" 
-                                    placeholder="Confirm new password" 
+                                <input
+                                    type="password"
+                                    placeholder="Confirm new password"
                                     value={confirmNewPassword}
                                     onChange={(e) => setConfirmNewPassword(e.target.value)}
                                     required

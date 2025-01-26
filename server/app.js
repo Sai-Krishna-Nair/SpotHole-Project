@@ -11,7 +11,8 @@ const PORT = 3000;
 
 
 // middleware
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '50mb' }));  // Allow JSON payloads up to 50MB
 app.use(cors());
 app.use('/api/v1/auth',auth);
 app.use('/api/v1/profile',profile);
