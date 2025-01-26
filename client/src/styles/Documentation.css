@@ -1,0 +1,122 @@
+.doc-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+    gap: 20px;
+}
+
+.doc-pdf {
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    height: 800px;
+    margin-bottom: 100px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.468);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.doc-option-section {
+    width: 260px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    height: 165px;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.468);
+}
+
+.doc-option-section ul {
+    list-style-type: none;
+    margin: 20px 0px;
+}
+
+.doc-option-section li {
+    padding: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: rgb(28, 28, 28);
+    font-size: 20px;
+    width: 230px;
+    align-items: center;
+    margin-left: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.doc-option-section li:hover {
+    color: #556b2f;
+    border: 1px solid #556b2f;
+}
+
+.doc-option-section li.active {
+    background-color: #8db547;
+    color: black;
+    border: 1px solid #556b2f;
+}
+
+.doc-section {
+    width: 80%;
+    padding: 0 20px 20px 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .doc-pdf {
+        width: 900px;
+        height: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .doc-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doc-option-section {
+        width: 100%;
+        position: relative; 
+        top: unset;
+        margin-bottom: 20px;
+    }
+
+    .doc-option-section li {
+        text-align: center;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .doc-pdf {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .doc-pdf {
+        height: 400px;
+    }
+
+    .doc-option-section li {
+        font-size: 18px;
+    }
+}

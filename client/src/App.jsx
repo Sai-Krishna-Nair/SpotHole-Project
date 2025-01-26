@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import Home from './Pages/Home';
-import Description from './Pages/Description';
 import Docs from './Pages/Docs';
 import Team from './Pages/Team';
 import Profile from './Pages/Profile';
@@ -39,10 +38,6 @@ function App() {
             {
                 path: '/signup',
                 element: user ? <Navigate to="/" /> : <Signup onAuthSuccess={handleAuthSuccess} />,
-            },
-            {
-                path: '/about',
-                element: user ? <Description /> : <Navigate to="/login" />,
             },
             {
                 path: '/documentation',

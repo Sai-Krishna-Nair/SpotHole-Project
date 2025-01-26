@@ -123,17 +123,6 @@
     font-size: 20px;
 }
 
-.icon-container .contact {
-    font-size: 18px;
-    padding: 7px 18px;
-    position: relative;
-}
-
-.icon-container .contact::before {
-    content: " Visit Us →";
-    transition: .2s ease;
-}
-
 
 @keyframes fadeIn {
     from {
