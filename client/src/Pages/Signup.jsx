@@ -61,7 +61,7 @@ function Signup({ onAuthSuccess }) {
     return (
         <div className="auth-container">
             <div className="auth-box">
-                <h2>Create Account</h2>
+                <h2>Sign Up</h2>
                 {error && <div className="error-message">{error}</div>}
                 {successMessage && <div className="success-message">{successMessage}</div>}
                 <form onSubmit={handleSubmit}>

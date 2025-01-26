@@ -18,13 +18,14 @@
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.751);
     width: 100%;
-    max-width: 400px;
+    max-width: 480px;
 }
 .auth-box h2{
-    font-family: Boring Sans B Trial;
+    font-family: Poppins;
     letter-spacing: 2px;
     margin: 10px;
     color: rgb(21, 21, 21);
+    margin-bottom: 30px;
 }
 /* Form Group Styling */
 .form-group {
