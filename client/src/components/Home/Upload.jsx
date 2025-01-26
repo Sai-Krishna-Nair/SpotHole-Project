@@ -116,6 +116,8 @@ export default function Upload() {
         setIsPopupVisible(false);
     };
 
+    
+
     return (
         <div id="demo" className="demo-container">
             <div className="demo-inner">
