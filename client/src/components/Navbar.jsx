@@ -39,12 +39,12 @@ export default function Navbar() {
             </div>
             <nav className="navbar">
                 <NavLink className={(e) => e.isActive ? "active" : ""} to='/'>HOME</NavLink>
-                <NavLink className={(e) => e.isActive ? "active" : ""} to='/documentation'>DOCUMENTATION</NavLink>
+                <NavLink className={(e) => e.isActive ? "active" : ""} to='/documentation'>PROJECT REPORT</NavLink>
                 <NavLink className={(e) => e.isActive ? "active" : ""} to='/team'>ABOUT US</NavLink>
                 <NavLink className={(e) => e.isActive ? "active" : ""} to='/profile'>PROFILE</NavLink>
             </nav>
             <div className="icon-container">
-                <a aria-label="Lightmode">
+                <a aria-label="Lightmode" href='https://github.com/Sai-Krishna-Nair/SpotHole-Project' target='_blank'>
                     <i className="fa-brands fa-github icon"></i>
                 </a>
             </div>

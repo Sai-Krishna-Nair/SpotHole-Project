@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import srsPdf from '../../assets/BEELABMANUAL.pdf'; // Path to the SRS PDF
-import documentationPdf from '../../assets/BEELABMANUAL.pdf'; // Path to the Documentation PDF
+import srsPdf from '../../assets/srs_report.pdf';
+import documentationPdf from '../../assets/doc_final.pdf';
 import '../../styles/Documentation.css';
 
 function Documentation() {
