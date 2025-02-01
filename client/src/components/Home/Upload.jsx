@@ -188,7 +188,7 @@ export default function Upload() {
                                     <>
                                         {/* Display the prediction probability if available */}
                                         {predictionProbability !== null && (
-                                            <p className='pop-up-text'>Prediction Probability: {predictionProbability}%</p>
+                                            <p className='pop-up-text'>Prediction Probability: {predictionProbability}</p>
                                         )}
                                         <p className='pop-up-text'>Enter location of pothole</p>
                                         <input
