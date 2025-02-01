@@ -31,7 +31,7 @@ function TeamSection() {
                             iconClass2="fa-brands fa-github icon"
                             iconClassRef2= {"https://github.com/EhsaasN"}
                             iconClass3="fa-brands fa-linkedin icon"
-                            iconClassRef3= {"linkedin.com/in/ehsaas-nahata-836544347"}
+                            iconClassRef3= {"https://linkedin.com/in/ehsaas-nahata-836544347"}
                         />
                         <Member
                             image={boi}
