@@ -70,9 +70,9 @@ export default function History() {
                     <p><strong>Location:</strong> {address}</p>
                     <p><strong>Description:</strong> {description}</p>
                 </div>
-                <button onClick={() => deleteUpload(id)} className="delete-button">
-                    Delete
-                </button>
+                {/*<button onClick={() => deleteUpload(id)} className="delete-button">*/}
+                {/*    Delete*/}
+                {/*</button>*/}
             </div>
         );
     };

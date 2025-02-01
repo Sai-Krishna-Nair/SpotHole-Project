@@ -22,7 +22,7 @@ app.add_middleware(
 )
 
 # Load ONNX model using ONNX Runtime
-onnx_model_path = "aditya_cnn40.onnx"
+onnx_model_path = "aditya_cnn60.onnx"
 session = ort.InferenceSession(onnx_model_path)
 
 # Define input/output names
@@ -71,7 +71,7 @@ async def predict(file: UploadFile = File(...), location: str = None, descriptio
 
     result_data = {
         "predicted_label": predicted_label,
-        "probability": output.item()  # Return the probability as well
+        "probability": round(output.item(),4) # Return the probability as well
     }
 
     return result_data  # Return prediction result to the frontend
