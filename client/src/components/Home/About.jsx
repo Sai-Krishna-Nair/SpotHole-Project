@@ -26,9 +26,8 @@ export default function About() {
                     <div className="about-text">
                         <p>SpotHole is revolutionizing road maintenance through cutting-edge AI technology. Our system provides real-time pothole detection and analysis, helping cities maintain safer roads for everyone.<br/> For more visit our <NavLink to='/documentation' id='about-text-1'>documentation</NavLink></p>
                         <div className="stats">
-                            <Stat value="95%" label="Detection Accuracy" />
+                            <Stat value="85.7%" label="Detection Accuracy" />
                             <Stat value="6000+" label="Images Trained" />
-                            <Stat value="1M+" label="Potholes Detected" />
                         </div>
                     </div>
                     <AboutImage />

@@ -1,19 +1,23 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 60px;
+    grid-template-columns: 500px 500px;
+    position: relative;
+    left: 20px;
+    gap: 100px;
     padding: 20px;
 }
 
 .feature-card {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
+    /* padding:30px; */
+    width: 400px;
+    height: 250px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .feature-card:hover {
@@ -26,6 +30,7 @@
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .feature-card h3 {
@@ -37,4 +42,5 @@
 .feature-card p {
     color: #666;
     line-height: 1.6;
+    margin: 20px;
 }

@@ -15,7 +15,7 @@ a{
 }
 
 .member-card {
-    background: rgb(209, 205, 205);
+    background-color: #f8f9fa;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.468);

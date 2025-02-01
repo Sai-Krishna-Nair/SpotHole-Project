@@ -20,33 +20,25 @@ export default function Features() {
                 <FeatureCard
                     iconClass="fas fa-camera"
                     title="Real-time Detection"
-                    description="Advanced AI algorithms for instant pothole detection"
+                    description="Algorithms for instant pothole detection"
                 />
                 <FeatureCard
                     iconClass="fas fa-map-marked-alt"
-                    title="GPS Mapping"
-                    description="Precise location tracking and mapping of road conditions"
+                    title="Trained on variety of dataset"
+                    description="Contains pothole image datasets from India, Japan and Czech"
                 />
-                <FeatureCard
-                    iconClass="fas fa-chart-line"
-                    title="Analytics"
-                    description="Comprehensive data analysis and reporting"
-                />
+                
                 <FeatureCard
                     iconClass="fas fa-camera"
-                    title="Real-time Detection"
-                    description="Advanced AI algorithms for instant pothole detection"
+                    title="Satisfactory Accuracy"
+                    description="Accurately identifies the existence of the pothole"
                 />
                 <FeatureCard
                     iconClass="fas fa-map-marked-alt"
-                    title="GPS Mapping"
-                    description="Precise location tracking and mapping of road conditions"
+                    title="Integration ready"
+                    description="Outputs can be fed into navigation systems or reported to local authorities"
                 />
-                <FeatureCard
-                    iconClass="fas fa-chart-line"
-                    title="Analytics"
-                    description="Comprehensive data analysis and reporting"
-                />
+            
             </div>
         </section>
     );
