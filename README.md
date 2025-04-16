@@ -1,4 +1,3 @@
-
 # SpotHole Project
 
 SpotHole is a full-stack web application designed to detect potholes in images using Neural Nets. 
@@ -15,6 +14,7 @@ The project uses Convolutional Neural Networks (CNNs) to identify potholes in im
   - **FastAPI** for serving the CNN model, processing images, and sending detection results.
 - **Database**: 
   - **MongoDB** stores user information, image data, and detection results.
+
 ## 🛠️ Installation
 
 To get started with SpotHole, follow these steps:
@@ -26,30 +26,30 @@ To get started with SpotHole, follow these steps:
 ```
 
 ### 2. Install dependencies
-    
+
 - For the **frontend** (React + Vite):
 ```bash
-    cd client
-    npm install
+  cd client
+  npm install
 ```
 
 - For the **backend** (Node.js + Express):
 ```bash
-    cd server
-    npm install
+  cd server
+  npm install
 ```
 
 - For the **AI backend** (FastAPI):
 ```bash
-    cd FastAPI_server
-    pip install -r requirements.txt
+  cd FastAPI_server
+  pip install -r requirements.txt
 ```
 
 ### 3. Start the servers
 
 Run all the servers concurrently with the following command:
 ```bash
-  npm run start
+    npm run start
 ```
 
 This command will:
@@ -60,6 +60,71 @@ This command will:
 ### 4. Access the App
 
 Once the servers are running, open your browser and go to `http://localhost:5173` to interact with the frontend and start uploading images for pothole detection.
+
+## Installation Instructions for MongoDB and React
+
+### 1. Install MongoDB
+
+If you don't have MongoDB installed, follow the instructions below based on your operating system:
+
+#### **For Ubuntu / Debian:**
+
+```bash
+  sudo apt update
+  sudo apt install -y mongodb
+```
+
+#### **For Fedora:**
+
+```bash
+  sudo dnf install -y mongodb-server
+```
+
+#### **For macOS (using Homebrew):**
+
+```bash
+  brew tap mongodb/brew
+  brew install mongodb-community@5.0
+```
+
+#### **For Windows:**
+
+1. Download and install MongoDB from the official [MongoDB website](https://www.mongodb.com/try/download/community).
+2. Follow the installation steps as per the instructions for your system.
+
+After installation, you can start MongoDB with the following command:
+```bash
+  sudo systemctl start mongodb  # Linux
+  brew services start mongodb   # macOS (Homebrew)
+```
+
+#### **Install Node.js and npm:**
+
+- **For Ubuntu/Debian:**
+```bash
+  sudo apt update
+  sudo apt install -y nodejs npm
+```
+
+- **For Fedora:**
+```bash
+  sudo dnf install -y nodejs
+```
+
+- **For macOS:**
+```bash
+  brew install node
+```
+
+- **For Windows:**
+1. Download the latest version of Node.js from the [official Node.js website](https://nodejs.org/).
+2. Follow the installation instructions.
+
+Once installed, verify the installation by running:
+```bash
+  node -v
+  npm -v
+```
 
 ## Project Structure
 ```
@@ -95,3 +160,4 @@ SpotHole Project/
 If you have any questions, feel free to open an issue or contact me directly via email: [saikrishna.nair2412@gmail.com](mailto:saikrishna.nair2412@gmail.com).
 
 ---
+```
